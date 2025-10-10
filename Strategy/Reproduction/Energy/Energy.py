@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 
 class EnergyTemplate(ABC):
     """
-    Template for energy-based reproduction strategies.
+    Template for energy management module for reproduction.
     """
     @abstractmethod
     def if_reproduce(self, current_value: float) -> bool:
@@ -21,6 +21,14 @@ class EnergyTemplate(ABC):
 
 
 class FlatConditionEnergy(EnergyTemplate):
+    """
+    Energy management module for reproduction with flat value as condition for reproduction.
+
+    Args:
+        condition_value (float): Value of energy required to reproduce.
+        energy_for_child (float): Energy given to child during reproduction.
+        energy_additional_loss (float, optional): Additional energy loss for parent during reproduction. Defaults to 0.0.
+    """
     def __init__(
             self, 
             condition_value : float,
