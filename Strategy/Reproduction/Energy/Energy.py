@@ -3,6 +3,9 @@ from abc import ABC, abstractmethod
 
 
 class EnergyTemplate(ABC):
+    """
+    Template for energy-based reproduction strategies.
+    """
     @abstractmethod
     def if_reproduce(self, current_value: float) -> bool:
         pass
