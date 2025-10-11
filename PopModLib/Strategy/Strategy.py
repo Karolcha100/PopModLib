@@ -1,8 +1,8 @@
 from typing import TypeVar, Generic, Type
 
-T = TypeVar("T", bound="Strategy")
+T = TypeVar("T", bound="StrategyFactory")
 
-class Strategy:
+class StrategyFactory:
     def __init__(self, strategy_id: str, modules: dict[str, object]) -> None:
         self.strategy_id = strategy_id
         self.modules = modules

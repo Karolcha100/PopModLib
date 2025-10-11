@@ -1,8 +1,8 @@
 from typing import TypeVar, Generic, Type
 
-T = TypeVar("T", bound="Reproduction")
+T = TypeVar("T", bound="ReproductionFactory")
 
-class Reproduction:
+class ReproductionFactory:
     def __init__(self, modules: dict[str, object]) -> None:
         self.modules = modules
         for name, module in modules.items():
