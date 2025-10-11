@@ -36,16 +36,16 @@ class FlatConditionEnergy(EnergyTemplate):
             energy_additional_loss : float = 0.0,
         ) -> None:
 
-        self.condition_value : float = condition_value
-        self.energy_for_child : float = energy_for_child
-        self.energy_additional_loss : float = energy_additional_loss
+        self._condition_value : float = condition_value
+        self._energy_for_child : float = energy_for_child
+        self._energy_additional_loss : float = energy_additional_loss
 
     def if_reproduce(self, current_value : float) -> bool:
-        return current_value >= self.condition_value
+        return current_value >= self._condition_value
 
     def get_energy_for_child(self) -> float:
-        return self.energy_for_child
+        return self._energy_for_child
     
     def get_total_parent_energy_loss(self) -> float:
-        return self.energy_for_child + self.energy_additional_loss
+        return self._energy_for_child + self._energy_additional_loss
     

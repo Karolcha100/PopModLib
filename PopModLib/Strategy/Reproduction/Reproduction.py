@@ -4,7 +4,7 @@ T = TypeVar("T", bound="ReproductionFactory")
 
 class ReproductionFactory:
     def __init__(self, modules: dict[str, object]) -> None:
-        self.modules = modules
+        self._modules = modules
         for name, module in modules.items():
             setattr(self, name, module)
 
