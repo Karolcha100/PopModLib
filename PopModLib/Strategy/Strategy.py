@@ -1,6 +1,13 @@
-from typing import TypeVar, Generic, Type
+from __future__ import annotations
 
-T = TypeVar("T", bound="StrategyFactory")
+from typing import Self, TYPE_CHECKING
+
+
+
+
+
+
+
 
 class StrategyFactory:
     def __init__(self, strategy_id: str, modules: dict[str, object]) -> None:
@@ -10,7 +17,7 @@ class StrategyFactory:
             setattr(self, name, module)
 
     @classmethod
-    def create(cls: Type[T], strategy_id: str, **modules: object) -> T:
+    def create(cls, strategy_id: str, **modules: object) -> Self:
         """Tworzy instancję i przypisuje moduły jako atrybuty"""
         instance = cls(strategy_id, modules)
         return instance

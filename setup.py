@@ -9,6 +9,6 @@ setup(
     package_data={"PopModLib": ["py.typed"]}, 
     install_requires=[
     ],
-    python_requires=">=3.8",
+    python_requires=">=3.13",
     zip_safe=False,
 )

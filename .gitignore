@@ -1,2 +1,6 @@
 # ignore local testing folder
 /local_test/
+
+#ignore venv and installed in dev mode library
+/venv/
+/PopModLib.egg-info/

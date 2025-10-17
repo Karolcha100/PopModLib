@@ -1,6 +1,11 @@
-from typing import TypeVar, Generic, Type
+from __future__ import annotations
 
-T = TypeVar("T", bound="ReproductionFactory")
+from typing import Self
+
+
+
+
+
 
 class ReproductionFactory:
     def __init__(self, modules: dict[str, object]) -> None:
@@ -9,7 +14,7 @@ class ReproductionFactory:
             setattr(self, name, module)
 
     @classmethod
-    def create(cls: Type[T], **modules: object) -> T:
+    def create(cls, **modules: object) -> Self:
         """Tworzy instancję i przypisuje moduły jako atrybuty"""
         instance = cls(modules)
         return instance
