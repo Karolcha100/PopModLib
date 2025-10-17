@@ -1,7 +1,7 @@
 from importlib import import_module
 import pkgutil
 
-
+from .Strategy import *
 
 
 
