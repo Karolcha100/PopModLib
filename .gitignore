@@ -6,4 +6,4 @@
 /PopModLib.egg-info/
 
 # pycache
-/pycache/
+/__pycache__/
