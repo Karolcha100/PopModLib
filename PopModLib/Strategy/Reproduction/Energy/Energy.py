@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-
+# TODO: Rename to this file and folder to Resources + adapt this to multiple resources management
 
 class EnergyTemplate(ABC):
     """
